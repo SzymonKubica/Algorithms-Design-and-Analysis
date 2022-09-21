@@ -5,5 +5,4 @@ insert x (y : ys)
   | otherwise = y : insert x ys
 
 isort :: [Integer] -> [Integer]
-isort [] = []
-isort (x : xs) = insert x (isort xs)
+isort = foldr insert []
