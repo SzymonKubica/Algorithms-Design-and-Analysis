@@ -21,8 +21,6 @@ node lt rt = Node (size lt + size rt) lt rt
   | k < size lt = lt !! k
   | k >= size lt = rt !! (k - size lt)
 
-type RAList a = [Maybe (Tree a)]
-
 flatten :: Tree a -> [a]
 flatten (Leaf x) = [x]
 flatten (Node _ lt rt) = flatten lt ++ flatten rt
